@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct HomeView: View {
+struct ToDoListView: View {
     
     @State private var text: String = ""
     @State private var showingAlert = false
@@ -30,8 +30,8 @@ struct HomeView: View {
                 Section(header: Text("your items")) {
                     ForEach(items) { toDoListItem in
                         VStack(alignment: .leading) {
-                            Text(toDoListItem.itemName!).font(.headline).padding(5).font(.caption)
-                            Text("\(toDoListItem.createdAt!, formatter: dataForamtter)")
+                            Text(toDoListItem.itemName!).font(.headline).padding(5).font(.headline)
+                            Text("\(toDoListItem.createdAt!, formatter: dataForamtter)").font(.body).foregroundColor(.red)
                         }
                     }.onDelete(perform: deleteItems)
                 }
@@ -92,6 +92,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ToDoListView()
     }
 }

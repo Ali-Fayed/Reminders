@@ -21,20 +21,6 @@ struct RemindersView: View {
         }
     }
 }
-private func alert () {
-    let alert = UIAlertController(title: "Add New ToDo item", message: nil, preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-
-    alert.addTextField(configurationHandler: { textField in
-        textField.placeholder = "Enter your new item..."
-    })
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-
-        if let name = alert.textFields?.first?.text {
-        }
-    }))
-    UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
-}
 struct RemindersView_Previews: PreviewProvider {
     static var previews: some View {
         RemindersView()
