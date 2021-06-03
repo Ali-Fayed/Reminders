@@ -6,18 +6,30 @@
 //
 
 import SwiftUI
-
+import Combine
 struct RemindersView: View {
+    @AppStorage("reminderNote", store: UserDefaults(suiteName: "group.com.fixedSolution.Reminders"))
+    var noteData: Data = Data()
+    @ObservedObject var reminderNotes = ReminderNotesStrore()
+    @State var isPlusClicked: Bool = false
     var body: some View {
         NavigationView {
             List {
                 Section(header: Text("your reminders")) {
-           
+                    ForEach (reminderNotes.notes) { note in
+                        ReminderNoteRow(noteModel: note)
+                    }
                 }
             }.toolbar {
-                EditButton()
-            }.navigationTitle("Reminders").listStyle(GroupedListStyle())
-
+                Button(action: { isPlusClicked = true}
+                ,label: {
+                    Image(systemName: "plus")
+                }).accentColor(.yellow)
+                    .popover(isPresented: $isPlusClicked, attachmentAnchor: .point(UnitPoint.bottom), arrowEdge: .top, content: {
+                    AddReminder(reminderNotes: reminderNotes)
+                })
+            }.navigationTitle("Reminders").listStyle(InsetGroupedListStyle()
+            )
         }
     }
 }
