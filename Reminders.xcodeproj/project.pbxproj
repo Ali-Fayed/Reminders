@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A15A3ED266822B500DF4227 /* UIKitViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A3EC266822B500DF4227 /* UIKitViews.swift */; };
+		6A15A3EF26682AF200DF4227 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A3EE26682AF200DF4227 /* WeatherView.swift */; };
+		6A15A3F226682B0300DF4227 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A3F126682B0300DF4227 /* WeatherViewModel.swift */; };
+		6A15A3F426682B0E00DF4227 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A3F326682B0E00DF4227 /* WeatherModel.swift */; };
+		6A15A3F82668501800DF4227 /* WeatherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A3F72668501800DF4227 /* WeatherServices.swift */; };
 		EA22B57D2666D15E00A39916 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B57C2666D15E00A39916 /* RemindersApp.swift */; };
 		EA22B57F2666D15E00A39916 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B57E2666D15E00A39916 /* ContentView.swift */; };
 		EA22B5812666D16000A39916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA22B5802666D16000A39916 /* Assets.xcassets */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A15A3EC266822B500DF4227 /* UIKitViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViews.swift; sourceTree = "<group>"; };
+		6A15A3EE26682AF200DF4227 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		6A15A3F126682B0300DF4227 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		6A15A3F326682B0E00DF4227 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		6A15A3F72668501800DF4227 /* WeatherServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServices.swift; sourceTree = "<group>"; };
 		EA22B5792666D15E00A39916 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA22B57C2666D15E00A39916 /* RemindersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersApp.swift; sourceTree = "<group>"; };
 		EA22B57E2666D15E00A39916 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A15A3F026682AF600DF4227 /* WeatherView */ = {
+			isa = PBXGroup;
+			children = (
+				6A15A3EE26682AF200DF4227 /* WeatherView.swift */,
+				6A15A3F326682B0E00DF4227 /* WeatherModel.swift */,
+				6A15A3F126682B0300DF4227 /* WeatherViewModel.swift */,
+				6A15A3F72668501800DF4227 /* WeatherServices.swift */,
+			);
+			path = WeatherView;
+			sourceTree = "<group>";
+		};
 		EA22B5702666D15E00A39916 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +107,7 @@
 				EA22B57E2666D15E00A39916 /* ContentView.swift */,
 				EA22B5AA2666DFFB00A39916 /* RemindersView */,
 				EA22B5A72666DFA900A39916 /* ToDoListView */,
+				6A15A3F026682AF600DF4227 /* WeatherView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +134,7 @@
 			children = (
 				EA22B5A22666D8B400A39916 /* ToDoList View.swift */,
 				EA22B5A82666DFB700A39916 /* DataStorage.swift */,
+				6A15A3EC266822B500DF4227 /* UIKitViews.swift */,
 			);
 			path = ToDoListView;
 			sourceTree = "<group>";
@@ -193,13 +216,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A15A3F82668501800DF4227 /* WeatherServices.swift in Sources */,
 				EA22B5862666D16000A39916 /* Persistence.swift in Sources */,
 				EA22B57F2666D15E00A39916 /* ContentView.swift in Sources */,
 				EA22B5A12666D8A800A39916 /* RemindersView.swift in Sources */,
 				EA22B57D2666D15E00A39916 /* RemindersApp.swift in Sources */,
 				EA22B5892666D16000A39916 /* Reminders.xcdatamodeld in Sources */,
+				6A15A3F226682B0300DF4227 /* WeatherViewModel.swift in Sources */,
 				EA22B5A92666DFB700A39916 /* DataStorage.swift in Sources */,
+				6A15A3EF26682AF200DF4227 /* WeatherView.swift in Sources */,
 				EA22B5A32666D8B400A39916 /* ToDoList View.swift in Sources */,
+				6A15A3ED266822B500DF4227 /* UIKitViews.swift in Sources */,
+				6A15A3F426682B0E00DF4227 /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

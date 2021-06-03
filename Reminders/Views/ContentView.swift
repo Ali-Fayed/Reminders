@@ -20,11 +20,13 @@ struct ContentView: View {
                 Image(systemName: "pencil")
                 Text("Reminders")
             }
+            WeatherView().tabItem {
+                Image(systemName: "pencil")
+                Text("Weather")
+            }
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
